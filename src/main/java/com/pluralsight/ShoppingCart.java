@@ -36,6 +36,15 @@ public class ShoppingCart {
   return cartItem;
  }
 
+ public void updateCartItem(int index, int quantity) {
+   try {
+    CartItem cartItem = (CartItem)cartItems.get(index);
+    cartItem.setQuantity(quantity);
+   } catch (Exception e) {
+     e.printStackTrace();
+   }
+ }
+
  public ArrayList<CartItem> getCartItems() {
   return cartItems;
  }
